@@ -1,0 +1,25 @@
+=== YARN NPM PACKAGE COMMANDS ===
+
+# creates package.json
+yarn init = npm init
+
+# add project dependency
+yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
+
+# reinstall depedencies
+yarn install
+
+=== BABEL COMMANDS ===
+
+# compile jsx into es5 
+param1 = source folder
+param2 = output folder, with es5 code
+param3 = presets = group of plugins to be used in the project
+param4 --watch = compile the react code to es5 code whenever there is a change in the source folder
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+
+=== LIVE-SERVER NPM PACKAGE COMMANDS ===
+
+# launch server and take the source is the public folder in the project's root
+live-server public
