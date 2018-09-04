@@ -15,19 +15,66 @@ import Options from './Options'
 class IndecisionApp extends React.Component {
     // this = component class instance
 
-    constructor(props) {
-        super(props);
+    // no need to put this property in a constructor because we are using
+    // the babel plugin babel-plugin-transform-class-properties
+     // options will be read from localStorage
+     state = {
+        options: []
+    };
 
-        // bind it because you are calling this method in another context
-        this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-        this.handlePick = this.handlePick.bind(this);
-        this.handleAddOption = this.handleAddOption.bind(this);
-        this.handleDeleteOption = this.handleDeleteOption.bind(this);
+    // wipe off the array
+    // no need to bind the this var to the class instance 
+    // cause we are using the babel plugin babel-plugin-transform-class-properties.
+    // the plugin makes this var = class instance
+    handleDeleteOptions = () => {
 
-        // options will be read from localStorage
-        this.state = {
-            options: []
-        };
+        // return an object which has the options property set to []
+        this.setState(() => ({ options: [] }));
+    }
+
+    // take an option and use setState to actually remove it
+    // no need to bind the this var to the class instance 
+    // cause we are using the babel plugin babel-plugin-transform-class-properties.
+    // the plugin makes this var = class instance
+    handleDeleteOption = (optionToRemove) => {
+        this.setState((prevState) => ({
+            // use Array.prototype.filter()
+            // = options will be assigned a new array with all the elements minus optionToRemove
+            options: prevState.options.filter((option) => option !== optionToRemove)
+        }))
+    }
+
+    // randomly pick an option from the list
+    // no need to bind the this var to the class instance 
+    // cause we are using the babel plugin babel-plugin-transform-class-properties.
+    // the plugin makes this var = class instance
+    handlePick = () => {
+        // generate a number with a range of 0...optionsLength - 1
+        const randomNum = Math.floor(Math.random() * this.state.options.length);
+
+        const option = this.state.options[randomNum];
+
+        alert(option);
+    }
+
+    // no need to bind the this var to the class instance 
+    // cause we are using the babel plugin babel-plugin-transform-class-properties.
+    // the plugin makes this var = class instance
+    handleAddOption = (option) => {
+
+        // if empty string is passed on
+        if (!option) {
+            return 'Error: Enter a value';
+        } 
+        // if string already exists in the options array
+        else if (this.state.options.indexOf(option) > -1) {
+            return 'Error: This option already exists. Please enter a different one.'
+        }
+
+        this.setState((prevState) => (
+            // create a new array by concatening the prevState.options array with the value option
+            { options: prevState.options.concat(option) }
+        ))
     }
 
     // lifecycle method
@@ -72,48 +119,6 @@ class IndecisionApp extends React.Component {
     // when a component is deleted from the DOM, gets replaced by another component/tag in the DOM
     componentWillUnmount() {
         console.log('componentWillUnmount');
-    }
-
-    // wipe off the array
-    handleDeleteOptions() {
-
-        // return an object which has the options property set to []
-        this.setState(() => ({ options: [] }));
-    }
-
-    // take an option and use setState to actually remove it
-    handleDeleteOption(optionToRemove) {
-        this.setState((prevState) => ({
-            // use Array.prototype.filter()
-            // = options will be assigned a new array with all the elements minus optionToRemove
-            options: prevState.options.filter((option) => option !== optionToRemove)
-        }))
-    }
-
-    handlePick() {
-        // generate a number with a range of 0...optionsLength - 1
-        const randomNum = Math.floor(Math.random() * this.state.options.length);
-
-        const option = this.state.options[randomNum];
-
-        alert(option);
-    }
-
-    handleAddOption(option) {
-
-        // if empty string is passed on
-        if (!option) {
-            return 'Error: Enter a value';
-        } 
-        // if string already exists in the options array
-        else if (this.state.options.indexOf(option) > -1) {
-            return 'Error: This option already exists. Please enter a different one.'
-        }
-
-        this.setState((prevState) => (
-            // create a new array by concatening the prevState.options array with the value option
-            { options: prevState.options.concat(option) }
-        ))
     }
 
     // render these 4 components

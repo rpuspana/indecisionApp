@@ -9,6 +9,10 @@ yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
 # reinstall depedencies
 yarn install
 
+# run yarn scripts
+yarn run <script name from package.json - scripts>
+Eg: yarn run serve
+
 === BABEL COMMANDS ===
 
 # compile jsx into es5 

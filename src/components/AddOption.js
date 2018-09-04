@@ -2,17 +2,17 @@ import React from 'react';
 
 // allow the user to add an option
 export default class AddOption extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.handleAddOption = this.handleAddOption.bind(this);
+    // no need to put this property in a constructor because we are using
+    // the babel plugin babel-plugin-transform-class-properties
+    state = {
+        error: undefined
+    };
 
-        this.state = {
-            error: undefined
-        }
-    }
-
-    handleAddOption(evnt) {
+    // no need to bind the this var to the class instance 
+    // cause we are using the babel plugin babel-plugin-transform-class-properties.
+    // the plugin makes this var = class instance
+    handleAddOption = (evnt) => {
         evnt.preventDefault();
 
         // get option element from <input ... name="option" />
@@ -26,7 +26,7 @@ export default class AddOption extends React.Component {
             // wipe the input value if there was no error
             evnt.target.elements.option.value = '';
         }
-    }
+    };
 
     render() {
         return (
@@ -34,7 +34,7 @@ export default class AddOption extends React.Component {
                 {this.state.error && <p>{this.state.error}</p>}
                 <form onSubmit={this.handleAddOption}>
                     <input type="text" name="option" />
-                    <button>Add Option---</button>
+                    <button>Add Option</button>
                 </form>
             </div>
         );
