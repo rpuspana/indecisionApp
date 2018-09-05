@@ -5,16 +5,6 @@ import ReactDOM from 'react-dom';
 
 import IndecisionApp from './components/IndecisionApp';
 
-// ******** experiment *********
-const Layout = (props) => {
-    return (
-        <div>
-            <p>header</p>
-            {props.children}
-            <p>footer</p>
-        </div>
-    );
-};
 
 // render IndecisionApp component 
 ReactDOM.render(<IndecisionApp />, document.getElementById('app'));

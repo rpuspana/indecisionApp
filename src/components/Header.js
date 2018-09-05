@@ -5,7 +5,7 @@ const Header = (props) => {
 
     // plays the role of render
     return (
-        <div>test text
+        <div>
             <h1>{props.title}</h1>
             <h2>{props.subtitle}</h2>
         </div>

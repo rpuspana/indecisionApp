@@ -3,14 +3,10 @@ import React from 'react';
 // import the default class AddOption from AddOption.js file
 import AddOption from './AddOption';
 
-// import the const Header from Header.js
-import Header from './Header'
-
-// import the const Action from Action.js
-import Action from './Action'
-
-// import the const Options from Options.js
-import Options from './Options'
+import Header from './Header';
+import Action from './Action';
+import Options from './Options';
+import OptionModal from './OptionModal';
 
 class IndecisionApp extends React.Component {
     // this = component class instance
@@ -18,8 +14,10 @@ class IndecisionApp extends React.Component {
     // no need to put this property in a constructor because we are using
     // the babel plugin babel-plugin-transform-class-properties
      // options will be read from localStorage
+     // selectedOption = randomly selected item from the list
      state = {
-        options: []
+        options: [],
+        selectedOption: undefined
     };
 
     // wipe off the array
@@ -44,6 +42,11 @@ class IndecisionApp extends React.Component {
         }))
     }
 
+    // close the modal window by making the selectedOption = undefined
+    handleClearSelectedOption = () => {
+        this.setState(() => ({ selectedOption: undefined }));
+    }
+
     // randomly pick an option from the list
     // no need to bind the this var to the class instance 
     // cause we are using the babel plugin babel-plugin-transform-class-properties.
@@ -54,7 +57,9 @@ class IndecisionApp extends React.Component {
 
         const option = this.state.options[randomNum];
 
-        alert(option);
+        this.setState(() => ({
+            selectedOption: option
+        }));
     }
 
     // no need to bind the this var to the class instance 
@@ -144,6 +149,11 @@ class IndecisionApp extends React.Component {
                 />
 
                 <AddOption handleAddOption={this.handleAddOption} />
+
+                <OptionModal 
+                    selectedOption={this.state.selectedOption}
+                    handleClearSelectedOption={this.handleClearSelectedOption}
+                />
             </div>
         );
     }

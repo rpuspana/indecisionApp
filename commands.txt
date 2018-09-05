@@ -12,6 +12,7 @@ yarn install
 # run yarn scripts
 yarn run <script name from package.json - scripts>
 Eg: yarn run serve
+    yarn run dev-server
 
 === BABEL COMMANDS ===
 
