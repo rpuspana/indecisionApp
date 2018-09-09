@@ -21,14 +21,31 @@ module.exports = {
             // loader to use
             loader: 'babel-loader',
 
-            // only when file names pass the regex test 
+            // only when file names pass the regex specified in test
             // babel will be run through them
             // the file being loaded ends with .js
             test: /\.js$/,
 
             // don't run babel on these files
             exclude: /node_modules/
+        },
+        // load files with .css or .scss extensions
+        {
+            test: /\.s?css$/,
 
+            // use an array of loaders
+            // Idea: setup loading scss files and compile them to css files in React
+            // sass loader : when you encounter a new SCSS file load it(sass-loader)
+            // and compile it to CSS code(sass-loader calls node-sass)
+            // when webpack encounters a .css file,
+            // it's gonna read that file in (css-loader)
+            // and dump it's contents into the DOM in a style tag(style-loader)
+            // End result: our styles showing up in the app
+            use: [
+                'style-loader',
+                'css-loader',
+                'sass-loader'
+            ]
         }]
     },
     // type of source map you want: (none), eval, etc from

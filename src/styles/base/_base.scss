@@ -1,0 +1,14 @@
+// this is a partial - separate file that is going to be loaded in styles.scss
+// here I will store a few things, base styles, etc (Eg. global font family)
+
+// every element under <html> has font size of
+// default font size 16px * 62.5% = 10px
+html {
+    font-size: 62.5%;
+}
+
+// all under body has font-family Helvetica, or Arial, or sans-serif
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+}
