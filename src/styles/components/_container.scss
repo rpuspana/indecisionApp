@@ -1,0 +1,13 @@
+// this file is used to :
+// - center the header
+// - center the body
+
+.container {
+    max-width: 60rem;
+
+    // 0rem top and bottom
+    // (length of screen rem - 60 rem)/2 rem for the left and right margin   
+    margin: 0 auto;
+
+    padding: 0 $m-size;
+}

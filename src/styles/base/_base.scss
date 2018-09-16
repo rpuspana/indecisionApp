@@ -1,6 +1,8 @@
 // this is a partial - separate file that is going to be loaded in styles.scss
 // here I will store a few things, base styles, etc (Eg. global font family)
 
+// SASS vars with $... are defined in _settings.cs file
+
 // every element under <html> has font size of
 // default font size 16px * 62.5% = 10px
 html {
@@ -9,6 +11,18 @@ html {
 
 // all under body has font-family Helvetica, or Arial, or sans-serif
 body {
+    background: $dark-blue;
+    
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.6rem;
+
+    // var in _settings.cs file
+    font-size: $m-size; 
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
 }

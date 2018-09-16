@@ -1,6 +1,16 @@
-// styles.scss entry point
+// styles.scss is the entry point for the app's styles
+
+// the order in which the imports are done does not matter
 
 // import partial from ./base/_settings.scss
 @import './base/settings';
+
+@import './components/button';
+@import './components/container';
 @import './base/base';
 @import './components/header';
+@import './components/option';
+@import './components/add-option';
+
+// widget = top part of the body
+@import './components/widget';

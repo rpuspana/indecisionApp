@@ -6,6 +6,7 @@ const Action = (props) => (
     // return this div. This return plays the role of render
     <div>
         <button 
+            className="big-button"
             onClick={props.handlePick}
             disabled={!props.hasOptions}
         >

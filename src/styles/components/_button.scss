@@ -1,0 +1,46 @@
+// App's "what should I do button"
+
+// What should I do button enabled
+.big-button {
+    background: $purple;
+    border: none;
+
+    // use the sass script HSL(hue saturation lightning) function darken()
+    // http://sass-lang.com/documentation/Sass/Script/Functions.html
+    border-bottom: .6rem solid darken($purple, 10%);
+
+    color: #FFF;
+    font-weight: bold;
+    font-size: $l-size;
+    margin-bottom: $xl-size;
+    padding: 2.4rem;
+
+    // same width as the parent div = 60rem
+    width: 100%;
+}
+
+// What should I do button enabled, using the disabled sudo class
+.big-button:disabled {
+    opacity: .5;
+}
+
+// smaller buttons of the application
+.button {
+    background: $purple;
+    border: none;
+    border-bottom: .3rem solid darken($purple, 10%);
+    color: #fff;
+    font-weight: 500;
+    padding: $s-size;
+}
+
+// using BEM notation = block element modifier
+// link = modifier for .button class
+// notation: .toBeModifiedClass--newClass
+// link version of that generic purple button
+.button--link {
+    background: none;
+    border: none;
+    color: $off-white;
+    padding: 0;
+}

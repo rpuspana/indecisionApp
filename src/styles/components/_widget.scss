@@ -1,0 +1,27 @@
+// widget = top part of the body
+
+.widget {
+    background: $light-blue;
+    margin-bottom: $xl-size;
+}
+
+.widget__message {
+    color: $off-white;
+    margin: 0;
+    padding: $l-size;
+    text-align: center;
+    border-bottom: 1px solid lighten($light-blue, 10%);
+}
+
+.widget-header {
+    background: $blue;
+    color: $off-white;
+    display: flex;
+    justify-content: space-between;
+    padding: $m-size;
+}
+
+// setup an element selector for widget title "Your Options"
+.widget-header__title {
+    margin: 0;
+}
