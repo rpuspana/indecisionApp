@@ -1,0 +1,70 @@
+// styles for the modal window
+// these styles are the modal's styles
+
+// target divs that are direct descendents of div with .ReactModalPortal
+// and not children of children
+.ReactModalPortal>div {
+
+    // before the portal opens set this opacity
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    // flexbox property - modal content is placed at the center of the screen
+    // and it's the same size as it's content
+    align-items: center;
+
+    // enable flexbox
+    display: flex;
+
+    // flexbox property - modal content is placed in the center of the screen
+    justify-content: center;
+
+    // transition from invisibile to visible:
+    // time to appear, how it will transition
+    transition: opacity 200ms ease-in-out;
+}
+
+// after the modal opens
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+ // N ms before the modal will be closed
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0
+}
+
+// override the default React Modal window content
+// this is the style that is going to be replaced style="position: absolute; 
+// top: 40px; left: 40px; right: 40px; bottom: 40px; border: 1px solid rgb(204, 204, 204); 
+// background: rgb(255, 255, 255); overflow: auto; border-radius: 4px; outline: none; padding: 20px;"
+.modal {
+    background: $light-blue;
+    color: #fff;
+
+    // long sentences are word wrapping when they get to the edge of the modal
+    max-width: 30rem;
+
+    outline: none;
+    padding: $l-size;
+    text-align: center;
+}
+
+.modal__title {
+    margin: 0 0 $l-size 0;
+}
+
+.modal__body {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 0 $l-size 0;
+    
+    // enforce word wrap of an item text
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.modal_button {
+
+}
