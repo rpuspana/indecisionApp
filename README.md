@@ -6,7 +6,7 @@ Click image to enlarge
 
 ### Description
 
-This is a React app that gives the user the possibility to enter item(s) in a list, presses the the app's big button and lets the app randomly select an item from the list for him.
+This is a React app that gives the user the possibility to enter item(s) in a list, press a button and have the app randomly select an item.
 
 ### App features
 
