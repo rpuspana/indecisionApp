@@ -43,5 +43,5 @@ Tested on the latest versions of Google Chrome, Mozilla Firefox, Microsoft Edge
 
 Click to view.
 
-![item list filled in](item-list.png)
+![item list filled in](https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG)
 ![modal](modal.png)
