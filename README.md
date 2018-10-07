@@ -1,6 +1,10 @@
-### Desrcription
+### Screenshots
 
-This is a React app that gives the user the posibility to enter item(s) in a list, presses the the app's big button and lets the app randomly select an item from the list for him.
+<img src="https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG" width="200" height="200"> <img src="https://github.com/rpuspana/indecisionApp/blob/master/modal.PNG" width="200" height="200">
+
+### Description
+
+This is a React app that gives the user the possibility to enter item(s) in a list, presses the the app's big button and lets the app randomly select an item from the list for him.
 
 ### App features
 
@@ -38,9 +42,3 @@ Tested on the latest versions of Google Chrome, Mozilla Firefox, Microsoft Edge
 - SASS
 - Normalize CSS
 - HTML 5, CSS3, JavaScript ES6
-
-### Screenshots
-
-Click to view.
-
-<img src="https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG" width="200" height="200"> <img src="https://github.com/rpuspana/indecisionApp/blob/master/modal.PNG" width="200" height="200">
