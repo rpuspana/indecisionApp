@@ -12,7 +12,7 @@
     color: #FFF;
     font-weight: bold;
     font-size: $l-size;
-    margin-bottom: $xl-size;
+    margin-bottom: $m-size;
     padding: 2.4rem;
 
     // same width as the parent div = 60rem
@@ -22,6 +22,15 @@
 // What should I do button enabled, using the disabled sudo class
 .big-button:disabled {
     opacity: .5;
+}
+
+// media query
+// when the width of the screen is larger than 45rem (medium and big screens)
+// apply these styles that override the properties of the classes below
+@media(min-width: $desktop-breakpoint) {
+    .big-button {
+        margin-bottom: $xl-size;
+    }
 }
 
 // smaller buttons of the application

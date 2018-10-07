@@ -11,8 +11,11 @@
 // styling for input field and Add Option button
 .add-option {
     display: flex;
-    padding: $m-size;
 
+    // flexbox property - stack things veritcally
+    flex-direction: column;
+
+    padding: $m-size;
 }
 
 // styling for the input field
@@ -25,6 +28,20 @@
     // grow to take all available white-space
     flex-grow: 1;
 
-    margin-right: $m-size;
+    margin: 0 0 $m-size 0;
     padding: $s-size;
+}
+
+// media query
+// when the width of the screen is larger than 45rem (medium and big screens)
+// apply these styles that override the properties of the classes below
+@media(min-width: $desktop-breakpoint) {
+    // select the class
+    .add-option {
+       flex-direction: row;
+    }
+
+    .add-option__input {
+        margin: 0 $s-size 0 0;
+    }
 }

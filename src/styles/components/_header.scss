@@ -3,7 +3,7 @@
 .header {
     background: $off-black;
     color: white;
-    margin-bottom: $xl-size;
+    margin-bottom: $m-size;
     padding: $m-size 0;
 }
 
@@ -19,7 +19,15 @@
 .header__subtitle {
     color: $off-white;
     font-size: $m-size;
-
     font-weight: 500;
     margin: 0;
+}
+
+// media query
+// when the width of the screen is larger than 45rem (medium and big screens)
+// apply these styles that override the properties of the classes below
+@media(min-width: $desktop-breakpoint) {
+    .header {
+        margin-bottom: $xl-size;
+    }
 }
