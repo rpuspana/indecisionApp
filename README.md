@@ -41,5 +41,7 @@ Tested on the latest versions of Google Chrome, Mozilla Firefox, Microsoft Edge
 
 ### Screenshots
 
-![alt text](readme_screenshots/item-list.png "Item list filled in")
-![alt text](readme_screenshots/modal.png "App selects an item and displays it")
+Click to view.
+
+![item list filled in](item-list.png)
+![modal](modal.png)
