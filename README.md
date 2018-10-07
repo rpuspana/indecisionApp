@@ -43,5 +43,6 @@ Tested on the latest versions of Google Chrome, Mozilla Firefox, Microsoft Edge
 
 Click to view.
 
-![item list filled in](https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG)
+[<img src="http://www.google.com.au/images/nav_logo7.png">](http://google.com.au/)
+![Alt text](item-list.png?raw=true "Item list")
 ![modal](modal.png)
