@@ -43,6 +43,5 @@ Tested on the latest versions of Google Chrome, Mozilla Firefox, Microsoft Edge
 
 Click to view.
 
-[<img src="https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG" width="100" height="100">](https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG)
-![Alt text](item-list.png?raw=true "Item list")
-![modal](modal.png)
+[<img src="https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG" width="200" height="200">]
+[<img src="https://github.com/rpuspana/indecisionApp/blob/master/modal.PNG" width="200" height="200">]
