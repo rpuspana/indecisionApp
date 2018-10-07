@@ -43,6 +43,6 @@ Tested on the latest versions of Google Chrome, Mozilla Firefox, Microsoft Edge
 
 Click to view.
 
-[<img src="https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG">](http://google.com.au/)
+[<img src="https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG" width="42" height="42">](https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG)
 ![Alt text](item-list.png?raw=true "Item list")
 ![modal](modal.png)
