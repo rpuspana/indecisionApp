@@ -2,7 +2,7 @@
 
 Click image to enlarge
 
-<img src="https://github.com/rpuspana/indecisionApp/blob/master/readme_pics/item-list.PNG" width="200" height="200"> <img src="https://github.com/rpuspana/indecisionApp/blob/master/readme_pics/modal.PNG" width="200" height="200">
+<img src="https://github.com/rpuspana/indecisionApp/blob/master/readme_pics/item-list.PNG" width="200" height="200"> <img src="https://github.com/rpuspana/indecisionApp/blob/master/readme_pics/modal-window-with-item.PNG" width="200" height="200">
 
 ### Description
 
