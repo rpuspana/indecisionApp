@@ -43,5 +43,4 @@ Tested on the latest versions of Google Chrome, Mozilla Firefox, Microsoft Edge
 
 Click to view.
 
-<img src="https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG" width="200" height="200">
-<img src="https://github.com/rpuspana/indecisionApp/blob/master/modal.PNG" width="200" height="200">
+<img src="https://github.com/rpuspana/indecisionApp/blob/master/item-list.PNG" width="200" height="200"> <img src="https://github.com/rpuspana/indecisionApp/blob/master/modal.PNG" width="200" height="200">
